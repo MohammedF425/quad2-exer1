@@ -1,0 +1,19 @@
+<div class="flip-container-wrapper">
+
+<div class="flip-container" [class.disabled]="isFlipping">
+  <div class="flipper" [@flipState]="flip" (@flipState.start)="onFlipStart($event)" (@flipState.done)="onFlipDone($event)">
+    <div class="front">
+      <img src="{{images[index1]}}" alt="Your Image" class="mx-auto">
+      <div class="content">{{captions[index1]}}</div>
+    </div>
+    <div class="back">
+      <img src="{{images[index2]}}" alt="Your Image" class="mx-auto">
+      <div class="content">{{captions[index2]}}</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="flex justify-center items-center h-screen">
+  <button (click)="toggleFlip()" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Flip</button>
+</div>
