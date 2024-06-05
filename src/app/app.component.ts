@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ImageRotatorComponent } from './image-rotator/image-rotator.component'; // Import the component
 import { FlipCardComponent } from './flip-card/flip-card.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule, ImageRotatorComponent,FlipCardComponent], // Import the component here
+  imports: [RouterOutlet,CommonModule,FlipCardComponent], // Import the component here
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
